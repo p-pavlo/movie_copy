@@ -1,0 +1,11 @@
+
+/* for movies component */
+.container {
+  display: flex;
+  background-color: darkgrey;
+}
+
+.item {
+  color: blueviolet;
+  margin: 'px';
+}

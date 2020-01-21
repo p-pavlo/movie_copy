@@ -14,7 +14,7 @@ export default () => {
         {/* <Layout> // TODO import this! */}
           <Switch>
             <Route path={C.ROUTE_HOME_PAGE} exact component={HomePage} />
-            <Route path={C.ROUTE_MOVIE_PAGE} exact component={MoviePage} />
+            <Route path={`${C.ROUTE_MOVIE_PAGE}/:id`} exact component={MoviePage} />
             <RedirectTo redirect={C.ROUTE_HOME_PAGE} />
           </Switch>
         {/* </Layout> */}
