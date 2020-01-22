@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// components
 import { Error, Loader, Movies, EmptyList } from '../../components';
-// constants
 import * as C from '../../constants';
+import '../../components/ui.css';
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -48,12 +47,13 @@ export default class HomePage extends Component {
 
   render() {
     const { movies, error, loading } = this.state;
-    if (loading) return <Loader />;
     if (error) return <Error />;
     if (!movies) return <div />;
     if (movies.length === 0) return <EmptyList />;
     return (
-      <div>
+      <div className='relative-container'>
+        {loading && <Loader />}
+        <h2 className="title">Popular movies</h2>
         <Movies movies={movies} goToDetails={this.goToDetails} />
       </div>
     )

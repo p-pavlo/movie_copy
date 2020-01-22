@@ -1,5 +1,8 @@
 import React from 'react';
+import './ui.css';
 
 export const Loader = () => (
-  <h1>Loading...</h1>
+  <div className='fade-container'>
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </div>
 );

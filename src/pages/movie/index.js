@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as C from '../../constants';
 import Details from './details';
 import SimilarMovies from './similar-movies';
-/////////////////////////////////////////////////////////////////
 
 export default class MoviePage extends Component {
   constructor(props) {
@@ -25,7 +24,7 @@ export default class MoviePage extends Component {
   }
 
   getDetails(id) {
-    fetch(`${C.BASE_URL}${id}${C.API_KEY}`)
+    fetch(`${C.BASE_URL}${id}${C.API_KEY}${C.WITH_CAST}`)
     .then(res => res.json())
     .then(details => this.setState({
       details,
