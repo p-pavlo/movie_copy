@@ -1,6 +1,6 @@
 import React from 'react';
-import { Error, Loader, Movies } from '../../components';
 import '../../components/ui.css';
+import { Error, Loader, Movies } from '../../components';
 
 const SimilarMovies = (props) => {
   const { error, movies, loading, goToDetails } = props;

@@ -14,6 +14,7 @@ export default class MoviePage extends Component {
       similarMoviesError: false,
       similarMoviesLoading: false,
     };
+    this.goHome = this.goHome.bind(this);
     this.getData = this.getData.bind(this);
     this.goToDetails = this.goToDetails.bind(this);
     this.getDataRequest = this.getDataRequest.bind(this);
@@ -68,8 +69,12 @@ export default class MoviePage extends Component {
     }, this.getDataRequest);
   }
 
+  goHome() {
+    window.location = C.ROUTE_HOME_PAGE;
+  }
+
   goToDetails(id) {
-    window.location = `/movie/${id}`;
+    window.location = `${C.ROUTE_MOVIE_PAGE}/${id}`;
   }
 
   render() {
@@ -82,6 +87,7 @@ export default class MoviePage extends Component {
       similarMoviesLoading } = this.state;
     return (
       <div>
+        <button onClick={() => this.goHome()}>Home</button>
         <Details
           data={details}
           error={detailsError}

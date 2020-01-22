@@ -1,8 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-// constants
 import * as C from '../constants';
-
 
 const HomePage = lazy(() => import(/* webpackChunkName: 'HomePage' */ '../pages/home'));
 const MoviePage = lazy(() => import(/* webpackChunkName: 'MoviePage' */ '../pages/movie'));

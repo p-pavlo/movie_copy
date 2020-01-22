@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Error, Loader, Movies, EmptyList } from '../../components';
-import * as C from '../../constants';
 import '../../components/ui.css';
+import * as C from '../../constants';
+import { Error, Loader, Movies, EmptyList } from '../../components';
 
 export default class HomePage extends Component {
   constructor(props) {
